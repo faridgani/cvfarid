@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Profesional & Elegan</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <!-- Library Animasi (AOS) -->
+    <link href="https://unpkg.com" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #121212;
+            --secondary: #6B7280;
+            --accent: #C5A059; /* Gold Elegan */
+            --bg: #FCFBFA;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigasi Melayang */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(252, 251, 250, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 1px; }
+
+        /* Header / Profile Section */
+        header {
+            max-width: 1100px; margin: 150px auto 80px; padding: 0 2rem;
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center;
+        }
+
+        .profile-img {
+            width: 100%; aspect-ratio: 1/1;
+            background: #e5e7eb; border-radius: 20px;
+            object-fit: cover; filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .profile-img:hover { filter: grayscale(0%); transform: scale(1.02); }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; margin-bottom: 1rem; }
+        .subtitle { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 2rem; }
+
+        /* Grid System */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 80px 0; border-top: 1px solid #eee; }
+
+        .section-title {
+            font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px;
+        }
+
+        /* Pengalaman & Pendidikan */
+        .timeline-item {
+            display: grid; grid-template-columns: 200px 1fr; gap: 30px; margin-bottom: 40px;
+        }
+
+        .date { font-weight: 600; color: var(--accent); }
+        .role { font-weight: 600; font-size: 1.2rem; }
+        .company { color: var(--secondary); margin-bottom: 10px; display: block; }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag {
+            padding: 8px 20px; border: 1px solid #ddd; border-radius: 50px;
+            font-size: 0.9rem; transition: 0.3s;
+        }
+        .skill-tag:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* Contact & Footer */
+        .contact-box {
+            background: var(--primary); color: var(--white);
+            padding: 60px; border-radius: 30px; text-align: center;
+        }
+
+        .btn-contact {
+            display: inline-block; padding: 15px 40px; background: var(--accent);
+            color: white; text-decoration: none; border-radius: 50px;
+            margin-top: 20px; font-weight: 600; transition: 0.3s;
+        }
+
+        .btn-contact:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
+
+        footer { text-align: center; padding: 40px; color: var(--secondary); font-size: 0.8rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { grid-template-columns: 1fr; margin-top: 100px; text-align: center; }
+            h1 { font-size: 2.5rem; }
+            .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">NAMANDA.</div>
+            <div style="font-size: 0.8rem; letter-spacing: 2px;">CV/RESUME 2024</div>
+        </div>
+    </nav>
+
+    <header>
+        <div data-aos="fade-right">
+            <!-- Ganti src dengan link foto Anda -->
+            <img src="https://drive.google.com/file/d/1tUbEm8RTEYFkyS5w7g-F7abR3GYpTLzW/view?usp=sharing" alt="Profile" class="profile-img">
+        </div>
+        <div data-aos="fade-up">
+            <p class="subtitle">Digital Creative & Dev</p>
+           
+            <h1>Saya [Nama Lengkap Anda].</h1>
+            <p style="font-size: 1.1rem; color: var(--secondary); margin-bottom: 30px;">
+                Seorang profesional yang berdedikasi tinggi dengan pengalaman lebih dari 5 tahun dalam membangun solusi digital. Fokus pada estetika minimalis dan fungsionalitas yang kuat.
+            </p>
+            <div style="display: flex; gap: 20px;">
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600;"><i class="ri-linkedin-line"></i> LinkedIn</a>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600;"><i class="ri-instagram-line"></i> Instagram</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Section Pengalaman -->
+        <section id="experience" data-aos="fade-up">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            
+            <div class="timeline-item">
+                <div class="date">2021 — Sekarang</div>
+                <div>
+                    <span class="role">Senior Web Developer</span>
+                    <span class="company">Tech Solution Corp, Jakarta</span>
+                    <p>Memimpin tim pengembang untuk membangun platform e-commerce berskala nasional dengan fokus pada optimasi performa.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">2018 — 2021</div>
+                <div>
+                    <span class="role">Junior UI Designer</span>
+                    <span class="company">Creative Agency, Bandung</span>
+                    <p>Merancang antarmuka pengguna untuk lebih dari 20 aplikasi mobile yang memprioritaskan kemudahan akses bagi pengguna.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Keahlian -->
+        <section data-aos="fade-up">
+            <h2 class="section-title">Keahlian Utama</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Product Design</div>
+                <div class="skill-tag">Web Development</div>
+                <div class="skill-tag">React.js</div>
+                <div class="skill-tag">Brand Strategy</div>
+                <div class="skill-tag">User Research</div>
+                <div class="skill-tag">UI/UX Design</div>
+            </div>
+        </section>
+
+        <!-- Section Kontak -->
+        <section data-aos="zoom-in">
+            <div class="contact-box">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px;">Tertarik untuk bekerja sama?</h2>
+                <p style="color: #999;">Saya selalu terbuka untuk diskusi mengenai projek baru atau peluang karir.</p>
+                <a href="mailto:email@anda.com" class="btn-contact">Hubungi Saya Sekarang</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nama Anda. Dibuat dengan presisi dan perhatian pada detail.</p>
+    </footer>
+
+    <!-- Script untuk Animasi -->
+    <script src="https://unpkg.com"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

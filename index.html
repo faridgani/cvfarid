@@ -78,10 +78,19 @@
         .timeline-item {
             display: grid; grid-template-columns: 200px 1fr; gap: 30px; margin-bottom: 40px;
         }
-
+        .project-desc { color: var(--gray); font-size: 0.95rem; margin-bottom: 20px; }
         .date { font-weight: 600; color: var(--accent); }
         .role { font-weight: 600; font-size: 1.2rem; }
         .company { color: var(--secondary); margin-bottom: 10px; display: block; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tech-tag {
+            background: #f3f4f6;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
 
         /* Skills Tags */
         .skills-container { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -102,6 +111,7 @@
             color: white; text-decoration: none; border-radius: 50px;
             margin-top: 20px; font-weight: 600; transition: 0.3s;
         }
+        
 
         .btn-contact:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
 
@@ -134,12 +144,10 @@
            
             <h1>Farid Saeful Gani.</h1>
             <p style="font-size: 1.1rem; color: var(--secondary); margin-bottom: 30px;">
-                
-            Saya lulusan dari Universitas Siliwangi Tasikmalaya jurusan Teknik Informatika dengan mengambil study Sistem Teknologi Informasi. Saya sangat bersemangat dan perfeksionis dalam menciptakan pengalaman digital bagi user disebuah aplikasi.
-            
+            Lulusan Teknik Informatika dari Universitas Siliwangi dengan konsentrasi Sistem Teknologi Informasi. Saya adalah seorang Quality Assurance yang berdedikasi dan perfeksionis, dengan fokus utama pada validasi pengalaman digital pengguna guna memastikan setiap aplikasi memenuhi standar kualitas dan fungsionalitas tertinggi.
             </p>
             <div style="display: flex; gap: 20px;">
-                <a href="https://www.linkedin.com/in/farid-saeful-gani-98587a134?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color: var(--primary); text-decoration: none; font-weight: 600;"><i class="ri-linkedin-line"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/farid-saeful-gani-98587a134?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color: var(--primary); text-decoration: none; font-weight: 600;"><i class="ri-linkedin-line"></i>LinkedIn</a>
                 <a href="https://wa.me/6281221502535" style="color: var(--primary); text-decoration: none; font-weight: 600;"><i class="ri-instagram-line"></i> Whatsapp</a>
             </div>
         </div>
@@ -155,16 +163,48 @@
                 <div>
                     <span class="role">Senior QA Manual</span>
                     <span class="company">PT. Sinergi Mitra Jaya Abadi, Jakarta</span>
-                    <p>Mempelajari Functional Specification Document sebagai bahan untuk membuat test case kemudian menganalisa bug, cek log request dan log response untuk compare dengan document specification, koordinasi dengan tim UAT/SIT kemudian Developer, Middleware, IT dan Product Owner.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Analisis Dokumen</span>
+                    </div>
+                    <p class="project-desc">Mempelajari Functional Specification Document (FSD) secara mendalam untuk memetakan skenario pengujian dan penyusunan test case.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Investigasi Teknis</span>
+                    </div>
+                    <p class="project-desc">Melakukan investigasi bug melalui verifikasi log request dan response terhadap spesifikasi dokumen guna memastikan integritas data.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Kolaborasi Lintas Fungsi</span>
+                    </div>
+                    <p class="project-desc">Mengoordinasikan temuan dan proses pengujian dengan tim SIT/UAT, pengembang (Developer), tim Middleware, serta Product Owner.</p>
                 </div>
             </div>
+            
             
             <div class="timeline-item">
                 <div class="date">2022 — 2024</div>
                 <div>
                     <span class="role">Quality Assurance Manual</span>
                     <span class="company">PT. Sinergi Mitra Jaya Abadi, Bogor</span>
-                    <p>Bekerja Full time untuk PT Bank Danamon Indonesia Tbk sebagai user pada project DCC. Menjalankan test case secara manual, mencari bug, menganalisa bug dan membuat dokumentasi testing/bug untuk report melalui pembuatan jira.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Pengujian End-to-End</span>
+                    </div>
+                    <p class="project-desc">Bertanggung jawab penuh dalam eksekusi manual testing pada proyek Danamon Cash Connect (DCC) untuk memastikan seluruh fitur berjalan sesuai kebutuhan bisnis bank.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Manajemen Defect</span>
+                    </div>
+                    <p class="project-desc">Mengidentifikasi, menganalisis, dan mendokumentasikan temuan bug secara mendalam untuk mendukung tim pengembang dalam proses perbaikan.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Pelaporan</span>
+                    </div>
+                    <p class="project-desc">Mengelola pelaporan bug dan status pengujian melalui platform Jira, guna memastikan transparansi progres proyek kepada seluruh stakeholder.</p>
+                    <div class="tech-stack">
+                    <span class="tech-tag">Validasi User Perspective</span>
+                    </div>
+                    <p class="project-desc">Bertindak sebagai penguji dari sisi pengguna untuk memastikan alur kerja aplikasi efisien, aman, dan memenuhi standar operasional perbankan.</p>
+                    
                 </div>
             </div>
 
@@ -173,8 +213,22 @@
                 <div>
                     <span class="role">Implementor & QA Manual</span>
                     <span class="company">PT. Intikom Berlian Mustika, Bogor</span>
-                    <p>Menjelaskan alur proses bisnis aplikasi Internet Banking DCC (Danamon Cash Connect) kepada nasabah. Pada September 2021 dipercaya menjadi Quality Assurance Manual pada project yang sama.
-                    </p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Implementasi & Edukasi</span>
+                    </div>
+                    <p class="project-desc">Memandu proses migrasi sistem dan memberikan edukasi mendalam terkait alur bisnis aplikasi perbankan kepada nasabah korporat berskala besar.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Transisi Peran Teknis</span>
+                    </div>
+                    <p class="project-desc">Berkat pemahaman mendalam terhadap produk, dipercaya untuk bertransisi menjadi QA Manual (UAT) pada proyek yang sama sejak September 2021.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Penjaminan Kualitas</span>
+                    </div>
+                    <p class="project-desc">Memastikan transisi fitur dari tahap pengembangan ke tahap penggunaan nasabah berjalan mulus melalui pengujian fungsional yang ketat.</p>
+                    
+                     
                 </div>
             </div>
         </section>

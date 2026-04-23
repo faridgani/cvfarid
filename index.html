@@ -8,7 +8,8 @@
     <!-- Google Fonts & Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link href="https://jsdelivr.net" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Library Animasi (AOS) -->
     <link href="https://unpkg.com" rel="stylesheet">
 
@@ -74,14 +75,28 @@
             font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px;
         }
 
-        /* Pengalaman & Pendidikan */
-        .timeline-item {
-            display: grid; grid-template-columns: 200px 1fr; gap: 30px; margin-bottom: 40px;
+
+    /* Section Project */
+        section { padding: 50px 0; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid var(--accent); display: inline-block; }
+
+        .project-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        .project-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
         }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        }
+
+        .project-name { font-size: 1.4rem; margin: 5px 0 15px; font-weight: 600; }
         .project-desc { color: var(--gray); font-size: 0.95rem; margin-bottom: 20px; }
-        .date { font-weight: 600; color: var(--accent); }
-        .role { font-weight: 600; font-size: 1.2rem; }
-        .company { color: var(--secondary); margin-bottom: 10px; display: block; }
+
         .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; }
         .tech-tag {
             background: #f3f4f6;
@@ -91,6 +106,11 @@
             font-weight: 600;
             color: var(--primary);
         }
+        
+        .company { color: var(--secondary); margin-bottom: 10px; display: block; }
+        .date { font-weight: 600; color: var(--accent); }
+        .role { font-weight: 600; font-size: 1.2rem; }
+
 
         /* Skills Tags */
         .skills-container { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -153,85 +173,90 @@
         </div>
     </header>
 
-    <div class="container">
-        <!-- Section Pengalaman -->
-        <section id="experience" data-aos="fade-up">
+    <main class="container">
+        <section>
             <h2 class="section-title">Pengalaman Kerja</h2>
+            <div class="project-grid">
             
-            <div class="timeline-item">
-                <div class="date">2024 — Sekarang</div>
-                <div>
-                    <span class="role">Senior QA Manual</span>
-                    <span class="company">PT. Sinergi Mitra Jaya Abadi, Jakarta</span>
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <span class="date">PT. Sinergi Mitra Jaya Abadi, Jakarta</span>
+                            <div>
+                                <span class="role">Senior QA Manual</span>
+                                <span class="company">2024 — Sekarang</span>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Analisis Dokumen</span>
+                                </div>
+                                <p class="project-desc">Mempelajari Functional Specification Document (FSD) secara mendalam untuk memetakan skenario pengujian dan penyusunan test case.</p>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Investigasi Teknis</span>
+                                </div>
+                                <p class="project-desc">Melakukan investigasi bug melalui verifikasi log request dan response terhadap spesifikasi dokumen guna memastikan integritas data.</p>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Kolaborasi Lintas Fungsi</span>
+                                </div>
+                                <p class="project-desc">Mengoordinasikan temuan dan proses pengujian dengan tim SIT/UAT, pengembang (Developer), tim Middleware, serta Product Owner.</p>
+                            </div>
+                        </div>
                     
-                    <div class="tech-stack">
-                        <span class="tech-tag">Analisis Dokumen</span>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                            <span class="date">PT. Sinergi Mitra Jaya Abadi, Bogor</span>
+                            <div>
+                                <span class="role">Quality Assurance Manual</span>
+                                <span class="company">2022 — 2024</span>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Pengujian End-to-End</span>
+                                </div>
+                                <p class="project-desc">Bertanggung jawab penuh dalam eksekusi manual testing pada proyek Danamon Cash Connect (DCC) untuk memastikan seluruh fitur berjalan sesuai kebutuhan bisnis bank.</p>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Manajemen Defect</span>
+                                </div>
+                                <p class="project-desc">Mengidentifikasi, menganalisis, dan mendokumentasikan temuan bug secara mendalam untuk mendukung tim pengembang dalam proses perbaikan.</p>
+                                
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Pelaporan</span>
+                                </div>
+                                <p class="project-desc">Mengelola pelaporan bug dan status pengujian melalui platform Jira, guna memastikan transparansi progres proyek kepada seluruh stakeholder.</p>
+                                
+                                <div class="tech-stack">
+                                <span class="tech-tag">Validasi User Perspective</span>
+                                </div>
+                                <p class="project-desc">Bertindak sebagai penguji dari sisi pengguna untuk memastikan alur kerja aplikasi efisien, aman, dan memenuhi standar operasional perbankan.</p>
+                            </div>
                     </div>
-                    <p class="project-desc">Mempelajari Functional Specification Document (FSD) secara mendalam untuk memetakan skenario pengujian dan penyusunan test case.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Investigasi Teknis</span>
+        
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <span class="date">2021 — 2022</span>
+                        <div>
+                            <span class="role">Implementor & QA Manual</span>
+                            <span class="company">PT. Intikom Berlian Mustika, Bogor</span>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">Implementasi & Edukasi</span>
+                            </div>
+                            <p class="project-desc">Memandu proses migrasi sistem dan memberikan edukasi mendalam terkait alur bisnis aplikasi perbankan kepada nasabah korporat berskala besar.</p>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">Transisi Peran Teknis</span>
+                            </div>
+                            <p class="project-desc">Berkat pemahaman mendalam terhadap produk, dipercaya untuk bertransisi menjadi QA Manual (UAT) pada proyek yang sama sejak September 2021.</p>
+                            
+                            <div class="tech-stack">
+                                <span class="tech-tag">Penjaminan Kualitas</span>
+                            </div>
+                            <p class="project-desc">Memastikan transisi fitur dari tahap pengembangan ke tahap penggunaan nasabah berjalan mulus melalui pengujian fungsional yang ketat.</p>
+                        </div>
                     </div>
-                    <p class="project-desc">Melakukan investigasi bug melalui verifikasi log request dan response terhadap spesifikasi dokumen guna memastikan integritas data.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Kolaborasi Lintas Fungsi</span>
-                    </div>
-                    <p class="project-desc">Mengoordinasikan temuan dan proses pengujian dengan tim SIT/UAT, pengembang (Developer), tim Middleware, serta Product Owner.</p>
-                </div>
-            </div>
-            
-            
-            <div class="timeline-item">
-                <div class="date">2022 — 2024</div>
-                <div>
-                    <span class="role">Quality Assurance Manual</span>
-                    <span class="company">PT. Sinergi Mitra Jaya Abadi, Bogor</span>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Pengujian End-to-End</span>
-                    </div>
-                    <p class="project-desc">Bertanggung jawab penuh dalam eksekusi manual testing pada proyek Danamon Cash Connect (DCC) untuk memastikan seluruh fitur berjalan sesuai kebutuhan bisnis bank.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Manajemen Defect</span>
-                    </div>
-                    <p class="project-desc">Mengidentifikasi, menganalisis, dan mendokumentasikan temuan bug secara mendalam untuk mendukung tim pengembang dalam proses perbaikan.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Pelaporan</span>
-                    </div>
-                    <p class="project-desc">Mengelola pelaporan bug dan status pengujian melalui platform Jira, guna memastikan transparansi progres proyek kepada seluruh stakeholder.</p>
-                    <div class="tech-stack">
-                    <span class="tech-tag">Validasi User Perspective</span>
-                    </div>
-                    <p class="project-desc">Bertindak sebagai penguji dari sisi pengguna untuk memastikan alur kerja aplikasi efisien, aman, dan memenuhi standar operasional perbankan.</p>
-                    
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="date">2021 — 2022</div>
-                <div>
-                    <span class="role">Implementor & QA Manual</span>
-                    <span class="company">PT. Intikom Berlian Mustika, Bogor</span>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Implementasi & Edukasi</span>
-                    </div>
-                    <p class="project-desc">Memandu proses migrasi sistem dan memberikan edukasi mendalam terkait alur bisnis aplikasi perbankan kepada nasabah korporat berskala besar.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Transisi Peran Teknis</span>
-                    </div>
-                    <p class="project-desc">Berkat pemahaman mendalam terhadap produk, dipercaya untuk bertransisi menjadi QA Manual (UAT) pada proyek yang sama sejak September 2021.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Penjaminan Kualitas</span>
-                    </div>
-                    <p class="project-desc">Memastikan transisi fitur dari tahap pengembangan ke tahap penggunaan nasabah berjalan mulus melalui pengujian fungsional yang ketat.</p>
-                    
-                     
-                </div>
             </div>
         </section>
+    
 
         <!-- Section Keahlian -->
         <section data-aos="fade-up">
@@ -261,7 +286,7 @@
                 <a href="mailto:fsaefulgani@gmail.com" class="btn-contact">Hubungi Saya Sekarang</a>
             </div>
         </section>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Farid Saeful Gani.</p>

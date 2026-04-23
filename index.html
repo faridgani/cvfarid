@@ -12,7 +12,7 @@
     <link href="https://googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Library Animasi (AOS) -->
     <link href="https://unpkg.com" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
             --primary: #121212;
@@ -85,13 +85,13 @@
             background: var(--white);
             padding: 35px;
             border-radius: 15px;
-            border: 2px solid rgba(0,0,0,0.05);
+            border: 4px solid rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .project-name { font-size: 1.4rem; margin: 5px 0 15px; font-weight: 600; }
@@ -131,9 +131,55 @@
             color: white; text-decoration: none; border-radius: 50px;
             margin-top: 20px; font-weight: 600; transition: 0.3s;
         }
-        
-
+    
         .btn-contact:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px; /* Ukuran Logo */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            color: Black;
+        }
+
+        /* Tooltip */
+        .whatsapp-btn::before {
+            content: "Chat kami";
+            position: absolute;
+            right: 75px;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .whatsapp-btn:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
 
         footer { text-align: center; padding: 40px; color: var(--secondary); font-size: 0.8rem; }
 
@@ -285,8 +331,19 @@
                 <p style="color: #999;">Saya selalu terbuka untuk diskusi mengenai projek baru atau peluang karir.</p>
                 <a href="mailto:fsaefulgani@gmail.com" class="btn-contact">Hubungi Saya Sekarang</a>
             </div>
+            
         </section>
     </main>
+
+    <!-- Ganti nomor 6281221502535 dengan nomor Anda -->
+    <a href="https://wa.me/6281221502535" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <!-- Logo WhatsApp -->
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    
 
     <footer>
         <p>&copy; 2026 Farid Saeful Gani.</p>
